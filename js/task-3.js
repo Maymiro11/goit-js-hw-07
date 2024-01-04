@@ -1,5 +1,5 @@
-let userName = document.querySelector('#name-input');
-let userSpan = document.querySelector('#name-output');
+const userName = document.querySelector('#name-input');
+const userSpan = document.querySelector('#name-output');
 
 userName.addEventListener("input",
  function() {

@@ -13,6 +13,7 @@ function createBoxesHandler() {
   const amount = Number(input.value);
 
   if (amount >= 1 && amount <= 100) {
+    destroyBoxes();
     createBoxes(amount);
   } else {
     alert('Please enter a number between 1 and 100');
@@ -24,14 +25,14 @@ function createBoxesHandler() {
 function createBoxes(amount) {
   for (let i = 1; i <= amount; i++) {
     const box = document.createElement('div');
-    box.style.width = `${30 + i * 10}px`;
-    box.style.height = `${30 + i * 10}px`;
+    box.style.width = `${30 + (i - 1) * 10}px`;
+    box.style.height = `${30 + (i - 1) * 10}px`;
     box.style.backgroundColor = getRandomHexColor();
     boxesContainer.appendChild(box);
   }
 }
 
-function destroyBoxesHandler() {
+function destroyBoxes() {
   boxesContainer.innerHTML = '';
 }
 

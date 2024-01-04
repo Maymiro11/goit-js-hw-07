@@ -11,5 +11,5 @@ const colorSpan = document.querySelector('.color');
 changeColorButton.addEventListener('click', () => {
   const randomColor = getRandomHexColor();
   bodyElement.style.backgroundColor = randomColor;
-  colorSpan.textContent = randomColor.toUpperCase();
+  colorSpan.textContent = randomColor;
 });
